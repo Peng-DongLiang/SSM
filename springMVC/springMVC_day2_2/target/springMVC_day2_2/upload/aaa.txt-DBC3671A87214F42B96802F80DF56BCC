@@ -1,0 +1,94 @@
+java的三大特性
+1.继承
+        继承是类与类之间的一种从属关系,一个子类可以继承一个父类,Java中的继承是单继承,一个子类只能有一个父类,但是一个父类可以被多个子类继承,
+2.多态
+        多态指的是对象的多种形态,其中继承是多态实现的基础,多态有两种:
+	1),引用多态:父类的引用可以只想本类的对象与子类的对象
+		public class Test{
+			public static void main(String[] args) {
+			 //父类的引用可以指向本类的对象
+		 	Animal ani1 = new Animal();
+			//父类的引用可以指向子类的对象
+			Animal ani2 = new Dog();    
+		     } 
+		 };
+	2).方法多态:创建父类对象时,引用的方法为父类的方法,创建子类对象时,调用的方法是子类重写父类的方法或者子类继承父类的方法,
+		public class Test{
+ 		   public static void main(String[] args) {
+		    //父类的引用可以指向本类的对象
+		    Animal ani1 = new Animal();
+		    //父类的引用可以指向子类的对象
+		    Animal ani2 = new Dog();
+ 		   //输出动物具有吃的本领
+		    ani1.eat();    
+		    //输出狗是吃肉的
+		    ani2.eat();
+		    } 
+		}
+	
+3.封装
+	封装为将类的信息隐藏在类内部,不允许外部程序直接访问,而是通过该类的方法实现对隐藏信息的操作和访问;建立一个Javabean(pojo);	
+	public class Student{
+   	  private float score;
+   	  public void setScore(float score){
+ 	       this.score = score;
+ 	   }
+	    public float getScore(){
+	        return score;
+	    }
+	};
+
+反射
+cookie和session
+普通请求和图片请求的区别
+ssm
+第三范式
+容余字段
+
+
+java中JDK,JRE,JVM三者区别:
+1)JDK:为Java的开发工具,它包含JRE,可以让开发者开发,编译,执行Java应用程序;
+2)JRE:为Java的运行环境,它包含虚拟机JVM;
+3)JVM:Java的虚拟机,用于执行Java字节码文件,因为它,Java程序才能在不同系统运行;
+
+Java语言支持的8种基本数据类型是:
+1)整型:byte,short,int,long
+2)浮点型:float,double
+3)布尔型:boolean
+4)字符型:char
+自动拆装箱:在基本数据类型与其对应的包装类型之间相互转换;
+
+重写(overriding)与重载(overloading)区别
+1)重写:
+	重写和被重写的方法中参数,返回值类型都相同;
+	重写的方法修饰符权限大于被重写的方法(public>protected>default>private);
+	重写的方法抛出的异常要与被重写方法抛出的异常相同;
+2)重载:
+	重载的方法与被重载的方法只要方法名相同,其中返回值类型可以不相同,参数必须不同;
+	修饰符的权限可以不同,且抛出的异常也允许不同;
+3)区别:
+	重写是多态起作用,可以通过调用子类来调用不同的方法
+	对调用被重载过的方法可以大大减少代码的输入量,可以根据参数不同来调用不同功能的方法
+
+接口和抽象类的区别
+1)接口是对动作的抽象,关注的是一个操作,表示这个对象能做什么,;
+2)抽象类是对根源的抽象,关注的是事务的本质,表示这个对象是什么;
+3)接口是可以多继承,抽象类不行,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
